@@ -1,0 +1,13 @@
+{
+	"mongodb" : {
+		"hostname" : "localhost",
+		"port" : 27017,
+		"db" : "test"
+	},
+	"storage_servers" : [
+		"http://localhost:8090",
+        "http://localhost:8090",
+        "http://localhost:8090",
+        "http://localhost:8090"
+	]
+}
