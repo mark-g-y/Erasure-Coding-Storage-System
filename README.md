@@ -15,7 +15,7 @@ Accessing the APIs:
 Response Codes:
 - 0 -> Everything went well
 - 10 -> Could not find data with the specified ID
-- 11 -> Data is retrieved, but something went wrong and we need to repair it
-- 99 -> Too many storage machines failed, and the data cannot be regenerated
+- 11 -> Data is retrieved successfully only after regenerating the lost pieces. User should make a PUT call to /storage/ to permanently restore the lost data
+- 99 -> Too many storage machines failed, and the lost data cannot be regenerated
 
 Inspired by [this article](https://code.facebook.com/posts/536638663113101/saving-capacity-with-hdfs-raid/) in the Facebook Engineering Blog! It seemed really cool so I used it as inspiration for building my own storage system :)
