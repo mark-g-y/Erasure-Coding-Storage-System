@@ -52,7 +52,7 @@ public class Decoder {
         return inputs;
     }
     
-    public static String decodeIntArray(int[][] inputsReversed, int length) {
+    public static byte[] decodeIntArray(int[][] inputsReversed, int length) {
         byte[] bytes = new byte[length];
         int index = 0;
         for (int r = 0; r < inputsReversed.length; r++) {
@@ -64,6 +64,6 @@ public class Decoder {
                 }
             }
         }
-        return new String(bytes);
+        return bytes;
     }
 }

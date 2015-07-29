@@ -91,7 +91,7 @@ public class ColdStorageAccessor {
         }
         // if too many missing pieces, we cannot reconstruct, and set the resulting 2D array to null. Otherwise, decode missing pieces
         int[][] inputsReversed = null;
-        String result = null;
+        byte[] result = null;
         if (missingCombos.size() + missingValues.size() > serverGroupings.length / 2 || missingValues.size() >= serverGroupings.length / 2) {
             // <TODO> implement system of equations to allow ability to solve edge case of missing values
             inputsReversed = null;

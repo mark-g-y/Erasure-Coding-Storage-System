@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class ColdStorageData {
 
-    private String resultingData;
+    private byte[] resultingData;
     private int[][] serverGroupedData;
     private ArrayList<Integer> missingValues;
     private ArrayList<Integer> missingCombos;
     private int status;
 
-    public ColdStorageData(String resultingData, int[][] serverGroupedData, ArrayList<Integer> missingValues, ArrayList<Integer> missingCombos) {
+    public ColdStorageData(byte[] resultingData, int[][] serverGroupedData, ArrayList<Integer> missingValues, ArrayList<Integer> missingCombos) {
         this.resultingData = resultingData;
         this.serverGroupedData = serverGroupedData;
         this.missingValues = missingValues;
@@ -18,7 +18,7 @@ public class ColdStorageData {
         this.status = missingValues.size() != 0 || missingCombos.size() != 0 ? Status.NEEDS_REPAIR : Status.OK;
     }
 
-    public String getData() {
+    public byte[] getData() {
         return resultingData;
     }
 
